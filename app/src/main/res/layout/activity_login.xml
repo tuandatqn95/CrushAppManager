@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Theme.AppCompat.DayNight.NoActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.crush.crushappmanager.LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/drink" />
+
+    <LinearLayout
+        android:id="@+id/loadingProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradiennt1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.tuyenmonkey.mkloader.MKLoader
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mk_color="@color/white"
+            app:mk_type="Sharingan" />
+
+        <TextView
+            android:id="@+id/loading_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            tools:text="loading text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_screen1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="50dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/crush_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp"
+            android:paddingTop="40dp">
+
+
+            <Button
+                android:id="@+id/g_plus"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/corner_button_red"
+                android:drawablePadding="25dp"
+                android:drawableStart="@drawable/ic_g_plus_icon"
+                android:gravity="center_vertical"
+
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:text="Google"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/corner_button_green"
+                android:drawablePadding="25dp"
+                android:drawableStart="@drawable/ic_smartphone"
+                android:gravity="center_vertical"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:text="Phone Number"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="By using the app, you agree to the Terms and Privacy Policies"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
